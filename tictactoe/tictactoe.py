@@ -45,7 +45,7 @@ print('Enter q to quit game')
 
 while playing: 
     draw_board(spots)
-    print(f"Player {str((turn % 2) +1 )}'s turn")
+    print(f"Player {str((turn % 2) +1 )}'s turn. Select a number to replace.")
     choice = input()
     if choice == 'q':
         playing = False
