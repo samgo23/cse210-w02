@@ -1,5 +1,5 @@
 # Import Card methods 
-from card import Card
+from game.card import Card
 card = Card()
 next_card = Card()
 
@@ -30,12 +30,13 @@ class Director:
             self (Director): an instance of Director.
         """
         while self.game == True:
+            print()
             self.display()
             self.check_card()
             self.keep_playing()
             
 
-    
+    #inout phase
     def display(self):
         '''The current card is displayed. The player guesses if the next one will be higher or lower. The the next card is displayed.
         
@@ -51,7 +52,7 @@ class Director:
         
 
         
-        
+    #update phase
     def check_card(self):
         '''The player earns 100 points if they guessed correctly. The player loses 75 points if they guessed incorrectly.
 
@@ -70,7 +71,7 @@ class Director:
             elif self.card1 > self.card2:
                 self.points -= 70
 
-
+    #output phase
     def keep_playing(self):
         '''Display the card and score. If a player reaches 0 points the game is over.
         
